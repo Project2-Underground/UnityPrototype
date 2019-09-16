@@ -10,6 +10,8 @@ public class GameController : MonoBehaviour
     public SoundManager soundManager;
     public Fading fade;
 
+    public List<GameObject> displayInventory;
+
     public SpriteRenderer spriteRenderer;
     void Awake()
     {
@@ -25,6 +27,23 @@ public class GameController : MonoBehaviour
     void Update()
     {
         MouseInput();
+    }
+
+    public void UpdateDisplayInventory()
+    {
+        /* get items from player's inventory
+         * distritbute item to available slot
+         */
+        for (int i = 0; i < displayInventory.Count; i++)
+        {
+            displayInventory[i].GetComponent<SpriteRenderer>().sprite = null;
+        }
+        List<GameObject> items = player.inventory.GetItemList();
+        for(int i = 0; i < items.Count; i++)
+        {
+            // displayInventory[i].GetComponent<SpriteRenderer>().sprite = items[i].GetComponent<Item>().sprite;
+            continue;
+        }
     }
 
     private void MouseInput()

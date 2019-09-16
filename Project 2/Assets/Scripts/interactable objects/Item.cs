@@ -10,10 +10,11 @@ public class Item : InteractableObj
     void Start()
     {
         spriteRenderer.sprite = sprite;
+        SetType(IneractTypeList.ITEM);
     }
 
     public override void action()
     {
-
+        GameController.instance.player.inventory.AddItem(gameObject);
     }
 }

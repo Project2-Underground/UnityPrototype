@@ -7,7 +7,7 @@ public class NPC : InteractableObj
     // Start is called before the first frame update
     void Start()
     {
-        
+        SetType(IneractTypeList.NPC);
     }
 
     // Update is called once per frame
@@ -15,6 +15,7 @@ public class NPC : InteractableObj
     {
         
     }
+
     public override void action()
     {
 

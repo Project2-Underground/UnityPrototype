@@ -2,18 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum IneractTypeList { HUMAN, ITEM, PUZZLE, PORTAL };
+public enum IneractTypeList { NPC, ITEM, PUZZLE, PORTAL };
 
 abstract public class InteractableObj : MonoBehaviour
 {
     // default type = ITEM
-    IneractTypeList ineractType = IneractTypeList.ITEM;
+    IneractTypeList interactType = IneractTypeList.ITEM;
 
     //abstract method
-    public abstract void action();
+    public virtual void action() { }
 
     public void SetType(IneractTypeList newInteractType)
     {
-        ineractType = newInteractType;
+        interactType = newInteractType;
+    }
+
+    public IneractTypeList SetType()
+    {
+        return interactType;
     }
 }

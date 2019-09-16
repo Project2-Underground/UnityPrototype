@@ -4,29 +4,25 @@ using UnityEngine;
 
 public class Fading : MonoBehaviour
 {
-    public SpriteRenderer spriteRenderer;
+    public Animator anim;
 
     void Start()
     {
-        // default invisible
-        Color tmpColor = spriteRenderer.color;
-        tmpColor.a = 0.0f;
-        spriteRenderer.color = tmpColor;
+        
     }
 
-    public void FadeIn()
+    public void Fade()
     {
-        // decrease alpha
-        Color tmpColor = spriteRenderer.color;
-        tmpColor.a -= 0.1f;
-        spriteRenderer.color = tmpColor;
+        // anim.SetTrigger("startFade");
     }
 
-    public void FadeOut()
+    public bool FadeEnd()
     {
-        // increase alpha
-        Color tmpColor = spriteRenderer.color;
-        tmpColor.a += 0.1f;
-        spriteRenderer.color = tmpColor;
+        /* if in fading animation
+         * return false
+         * else 
+         * return true
+         */
+        return true;
     }
 }
