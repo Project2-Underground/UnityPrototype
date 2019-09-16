@@ -5,10 +5,12 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public static GameController instance;
-    /* keep things as player, camera
-     * so that we can call anything from this instead of finding it 
-     */
-    
+    public Player player;
+    public Camera gameCamera;
+    public SoundManager soundManager;
+    public Fading fade;
+
+    public SpriteRenderer spriteRenderer;
     void Awake()
     {
         if(instance == null)
