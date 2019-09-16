@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Item : InteractableObj
 {
-    // Start is called before the first frame update
+    public Sprite sprite;
+    public SpriteRenderer spriteRenderer;
+
     void Start()
     {
-        
+        spriteRenderer.sprite = sprite;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void action()
     {
-        
+
     }
 }

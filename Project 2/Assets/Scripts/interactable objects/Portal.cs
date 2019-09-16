@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Portal : InteractableObj
 {
-    // Start is called before the first frame update
-    void Start()
+    public Vector3 nextPlayerPosition;
+    public Vector3 nextCameraPosition;
+
+    public override void action()
     {
-        
+        ChangeScene();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void ChangeScene()
     {
-        
+        // set camera to next scene
+        // set player position to next scene
     }
 }
