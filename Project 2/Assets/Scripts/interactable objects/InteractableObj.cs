@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractableObj : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public enum IneractTypeList { HUMAN, ITEM, PUZZLE, PORTAL };
 
-    // Update is called once per frame
-    void Update()
+abstract public class InteractableObj : MonoBehaviour
+{
+    // default type = ITEM
+    IneractTypeList ineractType = IneractTypeList.ITEM;
+
+    //abstract method
+    public abstract void action();
+
+    public void SetType(IneractTypeList newInteractType)
     {
-        
+        ineractType = newInteractType;
     }
 }
