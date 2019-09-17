@@ -7,15 +7,10 @@ public class SeperatableItem : Item
     public CombinableObj seperatedPart1;
     public CombinableObj seperatedPart2;
 
-    // Start is called before the first frame update
-    void Start()
+    public void SeperateItem()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GameController.instance.player.inventory.AddItem(seperatedPart1.gameObject);
+        GameController.instance.player.inventory.AddItem(seperatedPart2.gameObject);
+        GameController.instance.player.inventory.RemoveItem(gameObject);
     }
 }

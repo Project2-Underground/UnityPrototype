@@ -7,7 +7,7 @@ public class CombinableObj : Item
     public SeperatableItem combinedItem;
     public CombinableObj partToCombine;
 
-    bool CombineObject(CombinableObj part)
+    public bool CombineObject(CombinableObj part)
     {
         /* return true if combinable
          * false if not combinable
