@@ -10,7 +10,9 @@ abstract public class InteractableObj : MonoBehaviour
     IneractTypeList interactType = IneractTypeList.ITEM;
 
     //abstract method
-    public virtual void action() { }
+    public virtual void action() {
+
+    }
 
     public void SetType(IneractTypeList newInteractType)
     {
