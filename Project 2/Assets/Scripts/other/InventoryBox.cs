@@ -28,7 +28,7 @@ public class InventoryBox : MonoBehaviour
         return item;
     }
 
-    public void onClick()
+    public void OnClick()
     {
 
     }
